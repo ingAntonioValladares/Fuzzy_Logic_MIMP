@@ -1,0 +1,20 @@
+# Entorno Virtual y Caché de Python
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de Pruebas y VS Code
+.pytest_cache/
+.vscode/
+
+# Datos (Excluye datasets para evitar archivos pesados en Git)
+data/raw/*
+data/processed/*
+
+# Excepciones: Mantener la estructura de carpetas en Git mediante .gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
