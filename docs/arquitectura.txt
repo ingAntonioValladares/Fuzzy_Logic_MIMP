@@ -1,0 +1,42 @@
+==================================================================================================
+                      ARQUITECTURA DEL SISTEMA EXPERTO Y PIPELINE DE BI
+==================================================================================================
+
+ [ DATOS ABIERTOS MIMP ]  --> Registros brutos del Programa Aurora (Atenciones CEM)
+          │
+          ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. ETL & EDA (Python - Pandas / NumPy)                                                 │
+│    • Limpieza, filtrado e imputación de valores faltantes.                             │
+│    • Cálculo de antecedente 1: Carga de Incidencia (Volumen)                           │
+│    • Cálculo de antecedente 2: Riesgo Relacional (% Pareja/Ex Pareja)                  │
+│    • Cálculo de antecedente 3: Vulnerabilidad Etaria (% <18 y >60 años)                │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+          │
+          ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 2. MOTOR DE INFERENCIA DIFUSA (Python - From Scratch / Mamdani)                        │
+│    • Fuzzificación: Funciones de Membresía (Trapezoidales y Triangulares)              │
+│    • Evaluación de Reglas: Matriz Heurística (27 Reglas con Operadores MIN/MAX)        │
+│    • Defusificación: Cálculo del Centroide continuo de área discreta (0% a 100%)       │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+          │
+          ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 3. EXPORTACIÓN DE DATOS (Dataset Enriquecido)                                          │
+│    • Archivo: mimp_priorizacion_difusa.csv                                             │
+│    • Campos agregados: SCORE_PRIORIDAD_DIFUSA | CATEGORIA_RIESGO (Baja, Media, Crítica)│
+└────────────────────────────────────────────────────────────────────────────────────────┘
+          │
+          ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 4. DASHBOARD INTERACTIVO DE BI (Power BI)                                              │
+│    • Modelo Multidimensional & Métricas en DAX                                         │
+│    • Visión Ejecutiva (KPIs de Volumen y Severidad)                                    │
+│    • Focalización Territorial (Ranking Provincial y Criticidad en CEMs)                │
+│    • Analítica de Riesgo Difuso (Matriz Relacional y Distribución del Score)           │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+          │
+          ▼
+ [ REPOSITORIO & PUBLICACIÓN ] --> GitHub (Código Fuente) & LinkedIn (Post de Impacto)
+
