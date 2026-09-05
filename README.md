@@ -65,10 +65,17 @@ data/processed/dataset_procesado_difuso.xlsx
 ## Arquitectura del Modelo Difuso
 
 1. Variables Antecedentes (Entradas)
-   Variable /_/_/ Definición Matemática /_/_/ Rango de Entrada /_/_/ Conjuntos Difusos
-   Carga*Incidencia /*/*/ N° DE CASOS - MUJERES /*/*/ (0 - 100 casos) /*/*/ Baja, Media, Alta
-   Riesgo*Relacional /_/_/ (Pareja + Ex Pareja) / N Casos Mujeres * 100 /*/*/ (0% - 100%) /*/*/ Baja, Media, Alta
-   Vulnerabilidad*Etaria /_/_/ (Menores(0-17) + Adultos Mayores(60+)) / N Casos Mujeres \* 100 /_/_/ (0% - 100%) /_/_/ Baja, Media, Alta
+   -> Carga_Incidencia: Numero total de atenciones registradas (N° DE CASOS - MUJERES)
+   - Rango: 0 - 100 casos
+   - Conjuntos Difusos: Baja, Media, Alta
+
+   -> Riesgo_Relacional: Porcentaje de agresiones cometidas por el entorno intimo (((Pareja + Ex Pareja) / N Casos Mujeres) \* 100)
+   - Rango: 0% - 100%
+   - Conjuntos Difusos: Baja, Media, Alta
+
+   -> Vulnerabilidad_Etaria: Porcentaje de víctimas en rangos de edad de alta vulnerabilidad (((Menores(0-17) + Adultos Mayores(60+)) / N Casos Mujeres) \* 100)
+   - Rango: 0% - 100%
+   - Conjuntos Difusos: Baja, Media, Alta
 
 2. Variable Consecuente (Salida)
 
