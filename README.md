@@ -67,8 +67,8 @@ data/processed/dataset_procesado_difuso.xlsx
 1. Variables Antecedentes (Entradas)
    Variable /_/_/ Definición Matemática /_/_/ Rango de Entrada /_/_/ Conjuntos Difusos
    Carga*Incidencia /*/*/ N° DE CASOS - MUJERES /*/*/ (0 - 100 casos) /*/*/ Baja, Media, Alta
-   Riesgo*Relacional /*/\_/ (Pareja + Ex Pareja) / N Casos Mujeres * 100 /_/_/ (0% - 100%) /_/_/ Baja, Media, Alta
-   Vulnerabilidad*Etaria /*/*/ (Menores(0-17) + Adultos Mayores(60+)) / N Casos Mujeres * 100 /_/_/ (0% - 100%) /_/_/ Baja, Media, Alta
+   Riesgo*Relacional /_/_/ (Pareja + Ex Pareja) / N Casos Mujeres * 100 /*/*/ (0% - 100%) /*/*/ Baja, Media, Alta
+   Vulnerabilidad*Etaria /_/_/ (Menores(0-17) + Adultos Mayores(60+)) / N Casos Mujeres \* 100 /_/_/ (0% - 100%) /_/_/ Baja, Media, Alta
 
 2. Variable Consecuente (Salida)
 
