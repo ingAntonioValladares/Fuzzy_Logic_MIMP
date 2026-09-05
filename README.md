@@ -1,6 +1,6 @@
 # Sistema Difuso de Priorización MIMP
 
-Un sistema basado en **Lógica Difusa Mamdani** desarrollado en Python para calcular el nivel de prioridad de intervención frente a la violencia contra la mujer en el Perú. El modelo toma microdatos agregados del MIMP, calcula variables antecedentes (carga, riesgo relacional y vulnerabilidad etaria), aplica una matriz exhaustiva de 27 reglas difusas y defusifica mediante el método del centroide para generar un scoring continuo ($0 - 100$) y categorías de riesgo listas para consumir en **Power BI**.
+Un sistema basado en **Lógica Difusa Mamdani** desarrollado en Python para calcular el nivel de prioridad de intervención frente a la violencia contra la mujer en el Perú. El modelo toma microdatos agregados del MIMP, calcula variables antecedentes (carga, riesgo relacional y vulnerabilidad etaria), aplica una matriz exhaustiva de 27 reglas difusas y defusifica mediante el método del centroide para generar un scoring continuo (0 - 100) y categorías de riesgo listas para consumir en **Power BI**.
 
 ---
 
@@ -65,10 +65,10 @@ data/processed/dataset_procesado_difuso.xlsx
 ## Arquitectura del Modelo Difuso
 
 1. Variables Antecedentes (Entradas)
-   Variable /// Definición Matemática /// Rango de Entrada /// Conjuntos Difusos
-   Carga_Incidencia /// N° DE CASOS - MUJERES /// (0 - 100 casos) /// Baja, Media, Alta
-   Riesgo_Relacional /// (Pareja + Ex Pareja) / N Casos Mujeres _ 100 /// (0% - 100%) /// Baja, Media, Alta
-   Vulnerabilidad_Etaria /// (Menores(0-17) + Adultos Mayores(60+)) / N Casos Mujeres _ 100 /// (0% - 100%) /// Baja, Media, Alta
+   Variable /_/_/ Definición Matemática /_/_/ Rango de Entrada /_/_/ Conjuntos Difusos
+   Carga*Incidencia /*/*/ N° DE CASOS - MUJERES /*/*/ (0 - 100 casos) /*/*/ Baja, Media, Alta
+   Riesgo*Relacional /*/\_/ (Pareja + Ex Pareja) / N Casos Mujeres * 100 /_/_/ (0% - 100%) /_/_/ Baja, Media, Alta
+   Vulnerabilidad*Etaria /*/*/ (Menores(0-17) + Adultos Mayores(60+)) / N Casos Mujeres * 100 /_/_/ (0% - 100%) /_/_/ Baja, Media, Alta
 
 2. Variable Consecuente (Salida)
 
